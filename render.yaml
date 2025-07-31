@@ -2,11 +2,11 @@ services:
   - type: web
     name: chatapp-backend
     env: java
-    plan: free
     buildCommand: ./mvnw clean package -DskipTests
     startCommand: java -jar target/*.jar
     envVars:
       - key: JAVA_VERSION
         value: 17
       - key: MONGODB_URI
-        value: your_mongodb_connection_string
+        value: your_connection_string_here
+    rootDir: backend  # change this if your backend is not in a folder
