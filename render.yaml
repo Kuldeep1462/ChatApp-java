@@ -1,0 +1,11 @@
+services:
+  - type: web
+    name: chatapp-backend
+    runtime: java
+    buildCommand: "./mvnw clean package -DskipTests"
+    startCommand: "java -jar target/*.jar"
+    envVars:
+      - key: JAVA_VERSION
+        value: 17
+      - key: MONGODB_URI
+        value: your_mongodb_uri_here
