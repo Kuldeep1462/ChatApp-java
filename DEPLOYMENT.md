@@ -79,6 +79,8 @@ If you want to deploy the React frontend as well:
 1. **Build Fails with JAVA_HOME Error**
    - Ensure `JAVA_VERSION=17` is set in environment variables
    - The `system.properties` file should specify `java.runtime.version=17`
+   - If using Maven wrapper, ensure `maven-wrapper.jar` is present in `.mvn/wrapper/`
+   - Try using `mvn clean package -DskipTests` instead of `./mvnw` if wrapper fails
 
 2. **MongoDB Connection Error**
    - Verify your `MONGODB_URI` is correct
